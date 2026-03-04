@@ -116,7 +116,7 @@ jobs:
             - name: Update npm
               run: npm install -g npm@latest
             - name: Download Build Artifact
-              uses: actions/download-artifact@v7
+              uses: actions/download-artifact@v8
               with:
                   name: cli-packaged
                   path: cli/dist
@@ -142,7 +142,7 @@ jobs:
                   username: ${{ secrets.DOCKER_USERNAME }}
                   password: ${{ secrets.DOCKER_PASSWORD }}
             - name: Download Packaged CLI
-              uses: actions/download-artifact@v7
+              uses: actions/download-artifact@v8
               with:
                   name: cli-packaged
                   path: cli/dist
@@ -182,7 +182,7 @@ jobs:
                   username: ${{ secrets.DOCKER_USERNAME }}
                   password: ${{ secrets.DOCKER_PASSWORD }}
             - name: Download Packaged CLI
-              uses: actions/download-artifact@v7
+              uses: actions/download-artifact@v8
               with:
                   name: cli-packaged
                   path: cli/dist
@@ -215,7 +215,7 @@ jobs:
               with:
                   ref: ${{ env.GIT_REF }}
             - name: Download Build Artifact
-              uses: actions/download-artifact@v7
+              uses: actions/download-artifact@v8
               with:
                   name: cli-packaged
                   path: cli/dist
